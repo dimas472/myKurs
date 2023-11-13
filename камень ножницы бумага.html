@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+		<head>
+			<meta charset="UTF-8"/>
+			<title>Nasty</title>
+				
+				
+		</head>
+					
+			
+		<body>
+			<p>Камень Ножницы Бумага</p>
+			<button onclick="
+			picComputerMove();
+						
+			let resuit = '';
+			
+			if (computerMove === 'Камень') {
+			result = 'Нечья';
+			
+			} else if (computerMove === 'Ножницы') {
+			result = 'Вы проиграли.';
+			
+			} else if (computerMove === 'Бумага') {
+			result = 'Вы выиграли.';
+			}
+			
+			alert(`Вы выбрали Камень.Computer выбрал ${computerMove}. ${result}`);
+			
+			">Камень</button>
+			
+			<button onclick="
+			picComputerMove();
+						
+			let resuit = '';
+			
+			if (computerMove === 'Камень') {
+			result = 'Вы выиграли.';
+			
+			} else if (computerMove === 'Ножницы') {
+			result = 'Нечья.';
+			
+			} else if (computerMove === 'Бумага') {
+			result = 'Вы проиграли.';
+			}
+			
+			alert(`Вы выбрали Ножницы.Computer выбрал ${computerMove}. ${result}`);
+			
+			">Ножницы</button>
+			
+			<button onclick="
+			picComputerMove();
+						
+			let resuit = '';
+			
+			if (computerMove === 'Камень') {
+			result = 'Вы проиграли.';
+			
+			} else if (computerMove === 'Бумага') {
+			result = 'Вы выиграли.';
+			
+			} else if (computerMove === 'Ножницы') {
+			result = 'Нечья.';
+			}
+			
+			alert(`Вы выбрали Бумага.Computer выбрал ${computerMove}. ${result}`);
+			
+			">Бумага</button>
+			
+				<script> 
+				
+				let computerMove = ' ';
+				function picComputerMove() {
+				const chek = Math.random();
+													
+					if (chek >= 0 && chek < 1/3 ){
+					computerMove = 'Камень';
+					
+					}else if (chek >= 1/3 && chek < 2/3 ){
+					computerMove = 'Бумага';
+					
+					}else if (chek >= 2/3 && chek < 1 ){
+					computerMove = 'Ножницы';
+					}
+								
+					
+				};
+				</script> 	
+		</body>
+</html>
